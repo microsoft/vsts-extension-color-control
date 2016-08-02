@@ -1,0 +1,78 @@
+div {
+    font-family: Segoe UI, Helvetica;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:  ellipsis;
+}
+
+.container:focus {
+  outline: solid lightgray 1px;
+}
+
+.row.selected:focus {
+  background-color: rgb(220, 230, 244);
+}
+
+.row:not(.selected):hover{
+  background-color:#E3F2FD
+}
+
+.container {
+  height:100%;
+  border: 1px solid transparent;
+}
+
+.container:hover {
+  overflow-y: auto;
+}
+
+.container:not(:hover):not(:focus) .row:not(.selected) > .valueColor {
+  background-color: gray !important;
+}
+
+.container:not(:hover) .row.selected > .valueColor  {
+  color: black;
+}
+
+.row {
+  line-height: 18px;
+  clear: both;
+  padding: 3px 2px;
+  cursor:  pointer;
+  padding: 2px;
+  outline: none;
+}
+
+.row:hover {
+  background-color: rgb(220, 230, 244);
+}
+
+.valueColor {
+    float: left;
+    width: 15px;
+    height: 15px;
+    border-radius: 25%;
+    position: relative;
+    margin-right: 4px;
+    margin-top: 1px;
+    opacity: .45;
+    transition: background linear .2s;
+    border: 1px solid transparent;
+    padding-top: 2px;
+}
+
+
+.valueLabel {
+    color: gray;
+}
+
+.row:hover > .valueLabel,
+.row.selected > .valueLabel {
+  color: black;
+}
+
+.row:hover > .valueColor,
+.row.selected > .valueColor {
+  opacity: 1;
+}

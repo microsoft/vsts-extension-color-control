@@ -1,0 +1,114 @@
+{
+    "manifestVersion": 1,
+    "id": "color-control",
+    "version": "0.1.0",
+    "name": "Color Form Control",
+    "scopes": [
+        "vso.work",
+        "vso.work_write"
+    ],
+    "description": "Describe your extension.",
+    "publisher": "mariamclaughlin",
+    "icons": {
+        "default": "img/logo.JPG"
+    },
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "tags": [
+        "Sample"
+    ],
+    "content": {
+        "details": {
+            "path": "details.md"
+        }
+    },
+    "links": {
+        "home": {
+            "uri": "https://bit.ly"
+        },
+        "getstarted": {
+            "uri": "https://bit.ly"
+        },
+        "learn": {
+            "uri": "https://bit.ly"
+        },
+        "support": {
+            "uri": "https://bit.ly"
+        },
+        "repository": {
+            "uri": "https://bit.ly"
+        },
+        "issues": {
+            "uri": "https://bit.ly"
+        }
+    },
+    "branding": {
+        "color": "rgb(220, 235, 252)",
+        "theme": "light"
+    },
+    "files": [
+        {
+            "path": "img",
+            "addressable": true
+        },
+        {
+            "path": "scripts",
+            "addressable": true
+        },
+        {
+            "path": "styles",
+            "addressable": true
+        },
+        {
+            "path": "index.html",
+            "addressable": true
+        }
+    ],
+    "categories": [
+        "Integrate"
+    ],
+    "contributions": [
+        {
+            "id": "color-control-contribution",
+            "type": "ms.vss-work-web.work-item-form-control",
+            "targets": [
+                "ms.vss-work-web.work-item-form"
+            ],
+            "properties": {
+                "name": "Priority",
+                "group": "contributed",
+                "uri": "index.html",
+                "height": 90,
+                "inputs": [
+                    {
+                        "id": "FieldName",
+                        "description": "The field associated with the control.",
+                        "validation": {
+                            "dataType": "Field",
+                            "isRequired": true
+                        }
+                    },
+                    {
+                        "id": "Labels",
+                        "description": "The list of values to select from.",
+                        "validation": {
+                            "dataType": "String",
+                            "isRequired": false
+                        }
+                    },
+                    {
+                        "id": "Colors",
+                        "description": "The field associated with the control.",
+                        "validation": {
+                            "dataType": "String",
+                            "isRequired": false
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
