@@ -18,4 +18,4 @@ var provider = () => {
     }
 };
 
-VSS.register("mariamclaughlin.color-control-dev.color-control-contribution", provider);
+VSS.register("<your-publisher>.color-control-dev.color-control-contribution", provider);
