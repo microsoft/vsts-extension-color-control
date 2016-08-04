@@ -1,5 +1,3 @@
-# Sample Custom Control for the work item form
-This is an example of a custom control extension for use in on-premise instances of Visual Studio Team Services on the work item form.
 # Build a Custom Control for the Work Item Form
 
 ### **Team Services**
