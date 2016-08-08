@@ -3,12 +3,8 @@
     "id": "color-control",
     "version": "0.1.0",
     "name": "Color Form Control",
-    "scopes": [
-        "vso.work",
-        "vso.work_write"
-    ],
     "description": "Describe your extension.",
-    "publisher": "mariamclaughlin",
+    "publisher": "<your-publisher>",
     "icons": {
         "default": "img/logo.JPG"
     },
