@@ -3,7 +3,7 @@
     "id": "color-control",
     "version": "0.1.0",
     "name": "Color Form Control",
-    "description": "Describe your extension.",
+    "description": "The example we built adds color to picklists and allows user customization through labels.",
     "publisher": "<your-publisher>",
     "icons": {
         "default": "img/logo.JPG"
