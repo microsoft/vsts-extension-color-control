@@ -108,7 +108,8 @@ Instead of re-installing the extension, you can replace the extension with the n
 
 ## Make API calls to the work item form service
 
-If you want to make a call to the API in a file, you must import them in the beginning.
+Reading data from VSTS/TFS server is a common REST API task for a work item control.  The VSS SDK provides a set of services for these REST APIs.  To use the service, import it into the typescript file.
+
 ```typescript
 import * as VSSService from "VSS/Service";
 import * as WitService from "TFS/WorkItemTracking/Services";
@@ -116,24 +117,23 @@ import * as ExtensionContracts from "TFS/WorkItemTracking/ExtensionContracts";
 import * as Q from "q";
 ```
 
-This line is also a necessary addition at the beginning of *app.ts* to enable interaction with the VSS framework.  A peek into this file will show which function calls are available.
+To enable Intellisense in Visual Studio Code, include the type definition file *index.d.ts*.  Once you've added this definition file, it shows all functions available in the VSS SDK.
 ```typescript
 /// <reference path="../typings/index.d.ts" />
 ```
 
-### Commonly Needed
+## Commonly Needed
 | API                | Functions                   | Usage                                                                     |
 | ------------------ | --------------------------- | ------------------------------------------------------------------------- |
-| VSSService         | VSS.getConfiguration()      | Gets the inputs specified in the XML                                      |
-| WitService         | getAllowedFieldValues()     | Gets the allowed values from the correct field                            |
-|                    | getFieldValue()             | Gets the field's current value                                            |
-|                    | setFieldValue()             | Sets the field's current value                                            |
-|                    | getService()                | Get an instance of the host work item service                             |
-| ExtensionContracts | IWorkItemFieldChangedArgs   | Set of fields that have been changed.  'key' is the field reference name. |
+| VSSService         | VSS.getConfiguration()      | Returns the XML which defines the work item type.  Used in the sample to read the inputs of the control to describe its behavior.       |
+| WitService         | getService()                | Returns an instance of the server to make calls.                     |
+|                    | getFieldValue()             | Returns the field's current value.                                    |
+|                    | setFieldValue()             | Returns the field's current value using your control.       |
+|                    | getAllowedFieldValues()     | Returns the allowed values, or the items in a dropdown, of a field.                                    |
 
 
-### Examples
-You can get information from the work item service by creating an instance of the service, and then using one of the service's functions to obtain information about the field, and then act on it directly.  In this example, I am asking for the allowed values of a field and storing them in the variable `allowedValues`.
+### How to invoke methods on a service call
+ Create an instance of the work item service to get information about the work item.  Use one of the service's functions to get information about the field.  This example asks for the allowed values of a field.
 ```typescript
 WitService.WorkItemFormService.getservice().then(
         (service) => {
@@ -143,7 +143,9 @@ WitService.WorkItemFormService.getservice().then(
         }
 )
 ```
-To utilize two return values from one service call, use Q.  In this example, I am asking for the allowed values and the current value associated with a field using the Q.spread function.
+
+### Recommendation: use Q with service calls
+To wait on the response of multiple calls, you can use Q.  This example shows how to ask for the allowed values and the current value associated with a field using the Q.spread function.  You can make two parallel requests, and the code will not be executed until both services have returned a response.
 
 ```typescript
 WitService.WorkItemFormService.getService().then(
