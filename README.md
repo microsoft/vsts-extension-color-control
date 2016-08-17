@@ -3,7 +3,7 @@
 ### Usage ###
 
 1. Clone the repository.
-2. 1. Open the Command Prompt and change to the directory where you cloned the project.  For instance, if it is cloned in a folder called "extensions" and saved as "vsts-sample-wit-custom-control", you will navigate to the following command line.
+2. Open the Command Prompt and change to the directory where you cloned the project.  For instance, if it is cloned in a folder called "extensions" and saved as "vsts-sample-wit-custom-control", you will navigate to the following command line.
     > cd C:\extensions\vsts-sample-wit-custom-control
 1. Run `npm install` to install required local dependencies.
 2. Run `npm install -g grunt` to install a global copy of grunt (unless it's already installed).
