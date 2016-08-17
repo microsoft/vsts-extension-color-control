@@ -1,4 +1,4 @@
-# Build a Custom Control for the Work Item Form
+# Custom Control for the Work Item Form
 
 ### Usage ###
 
