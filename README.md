@@ -1,5 +1,7 @@
 # Custom Control for the Work Item Form
 
+![alt-text](./img/logo.JPG)
+
 ### Usage ###
 
 1. Clone the repository.
