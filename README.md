@@ -1,6 +1,6 @@
 # Custom Control for the Work Item Form
 
-![alt-text](./img/logo.JPG)
+<img src="./img/logo.JPG" style="width: 300px;" /> 
 
 ### Usage ###
 
