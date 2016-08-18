@@ -88,7 +88,7 @@ export class colorControl {
             this.rows.push(row);
             container.append(row.create());
             // checks if the row is selected and displays accordingly
-            if (option.value === this.model.getSelectedValue()) {
+            if (String(option.value) === this.model.getSelectedValue()) {
                 row.select(true);
             }
             else {
