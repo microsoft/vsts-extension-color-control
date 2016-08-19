@@ -1,6 +1,8 @@
 ## Customize your work item form with a color control ##
 
-Replace your drop-down menu fields with a color control on the work item form to improve visibility. You can customize the colors and labels you would like to appear on your control. Additionally, the control can be used by both your mouse and keyboard (space bar, left/right and up/down arrow keys).
+Replace your drop-down menu fields with a color control on the work item form to improve visibility. 
+
+You can customize the colors and labels you would like to appear on your control. Additionally, the control can be used by both your mouse and keyboard (space bar, left/right and up/down arrow keys).
  
 ## Quick steps to get started ##
 
