@@ -1,3 +1,5 @@
+> This is currently only available on TFS "15" or later. It is not available on VSTS.
+
 ## Customize your work item form with a color control ##
 
 Replace your drop-down menu fields with a color control on the work item form to improve visibility. 
@@ -32,6 +34,8 @@ The [source](https://github.com/Microsoft/vsts-sample-wit-custom-control) for th
 We thank the following contributor(s) for this extension: Alison Chow, Maria McLaughlin and Nelson Troncoso Aldas. 
 
 ## Users have also installed ##
+
+> WITIQ, please note: This link is not live yet on visualstudio.com. 
 
 You can find more custom controls here: 
 
