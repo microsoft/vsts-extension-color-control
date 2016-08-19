@@ -48,5 +48,3 @@ We need your feedback! Here are some ways to connect with us:
 
 * Add a review below.
 * Send us an [email](mailto://witiq@microsoft.com).
-
-Review the [list of features and resolved issues of latest tools and extensions](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2016/07/15/list-of-features-and-resolved-issues-of-latest-tools-and-extensions/) for information on the latest releases.
