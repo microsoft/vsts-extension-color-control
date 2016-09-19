@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "color-control",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "name": "Color Form Control",
     "description": "The example we built adds color to picklists and allows user customization through labels.",
     "publisher": "<your-publisher>",
@@ -82,8 +82,12 @@
                     {
                         "id": "FieldName",
                         "description": "The field associated with the control.",
+                        "type": "WorkItemField",
+                        "properties": {
+                            "workItemFieldTypes": ["Integer"]
+                        },
                         "validation": {
-                            "dataType": "Field",
+                            "dataType": "String",
                             "isRequired": true
                         }
                     },
