@@ -50,7 +50,7 @@ export class InputParser {
 
         } else {
 
-            throw ("Allowed values not specified.");
+            throw ("The backing field does not have allowed values. Verify that the field used by this control is a picklist");
         }
     }
     /**
