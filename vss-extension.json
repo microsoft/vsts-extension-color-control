@@ -82,7 +82,7 @@
                         "description": "The field associated with the control.",
                         "type": "WorkItemField",
                         "properties": {
-                            "workItemFieldTypes": ["String"]
+                            "workItemFieldTypes": ["String", "Integer"]
                         },
                         "validation": {
                             "dataType": "String",
