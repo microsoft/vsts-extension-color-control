@@ -1,4 +1,4 @@
-> This is currently only available on TFS "15" or later.
+> This is currently only available on TFS "15" or later and VSTS.
 
 ## Customize your work item form with a color control ##
 
@@ -8,7 +8,7 @@ You can customize the colors and labels you would like to appear on your control
  
 ## Quick steps to get started ## 
 
-1. Navigate to your work item form custimization page and add a Picklist colors custom control.
+1. Navigate to your work item form custimization page and add a Color Form Control.
 
 2. Learn about how to customize the color control directly on XML [here](https://github.com/Microsoft/vsts-sample-wit-custom-control/blob/master/README.md) for TFS. 
 

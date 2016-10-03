@@ -1,10 +1,10 @@
 {
     "manifestVersion": 1,
-    "id": "picklist-colors",
+    "id": "color-form-control",
     "version": "0.1.1",
-    "name": "Picklist Colors",
+    "name": "Color Form Control",
     "description": "The example we built adds color to picklists and allows user customization through labels.",
-    "publisher": "MS-Devlabs",
+    "publisher": "ms-devlabs",
     "icons": {
         "default": "img/logo.png"
     },
@@ -71,7 +71,7 @@
                 "ms.vss-work-web.work-item-form"
             ],
             "properties": {
-                "name": "Picklist colors",
+                "name": "Color Form Control",
                 "group": "contributed",
                 "uri": "index.html",
                 "height": 90,
