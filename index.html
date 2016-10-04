@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <!-- VSS Framework --> 
-    <script src="scripts/VSS.SDK.min.js"></script> 
+    <script src="dist/VSS.SDK.min.js"></script> 
 
     <title>Color Control</title>
     <link rel="stylesheet" href="styles/style.css" type="text/css"/>
@@ -18,7 +18,7 @@
         });
 
         // Load main entry point for extension 
-        VSS.require(["scripts/app"], function () {
+        VSS.require(["dist/app"], function () {
             // loading succeeded
             VSS.notifyLoadSucceeded();
         });

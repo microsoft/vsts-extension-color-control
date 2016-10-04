@@ -1,12 +1,12 @@
 {
     "manifestVersion": 1,
-    "id": "color-control",
+    "id": "color-form-control",
     "version": "0.1.1",
     "name": "Color Form Control",
     "description": "The example we built adds color to picklists and allows user customization through labels.",
-    "publisher": "<your-publisher>",
+    "publisher": "ms-devlabs",
     "icons": {
-        "default": "img/logo.JPG"
+        "default": "img/logo.png"
     },
     "targets": [
         {
@@ -14,7 +14,10 @@
         }
     ],
     "tags": [
-        "Sample"
+        "Work Item",
+        "Work Item control",
+        "Pick list",
+        "Color coded"
     ],
     "content": {
         "details": {
@@ -22,23 +25,17 @@
         }
     },
     "links": {
-        "home": {
-            "uri": "https://bit.ly"
-        },
-        "getstarted": {
-            "uri": "https://bit.ly"
-        },
         "learn": {
-            "uri": "https://bit.ly"
+            "uri": "https://github.com/Microsoft/vsts-sample-wit-custom-control/blob/master/README.md"
         },
         "support": {
-            "uri": "https://bit.ly"
+            "uri": "https://github.com/Microsoft/vsts-sample-wit-custom-control"
         },
         "repository": {
-            "uri": "https://bit.ly"
+            "uri": "https://github.com/Microsoft/vsts-sample-wit-custom-control"
         },
         "issues": {
-            "uri": "https://bit.ly"
+            "uri": "https://github.com/Microsoft/vsts-sample-wit-custom-control/issues"
         }
     },
     "branding": {
@@ -51,7 +48,7 @@
             "addressable": true
         },
         {
-            "path": "scripts",
+            "path": "dist",
             "addressable": true
         },
         {
@@ -64,7 +61,7 @@
         }
     ],
     "categories": [
-        "Integrate"
+        "Plan and track"
     ],
     "contributions": [
         {
@@ -74,17 +71,18 @@
                 "ms.vss-work-web.work-item-form"
             ],
             "properties": {
-                "name": "Priority",
+                "name": "Color Form Control",
                 "group": "contributed",
                 "uri": "index.html",
                 "height": 90,
                 "inputs": [
                     {
                         "id": "FieldName",
+                        "name": "Backing string field, must have allowed values.",
                         "description": "The field associated with the control.",
                         "type": "WorkItemField",
                         "properties": {
-                            "workItemFieldTypes": ["String"]
+                            "workItemFieldTypes": ["String", "Integer"]
                         },
                         "validation": {
                             "dataType": "String",
@@ -93,6 +91,7 @@
                     },
                     {
                         "id": "Labels",
+                        "name": "Labels, ';' seperated. Example: a;b;c",
                         "description": "The list of values to select from.",
                         "validation": {
                             "dataType": "String",
@@ -101,6 +100,7 @@
                     },
                     {
                         "id": "Colors",
+                        "name": "Colors, ';' seperated. Example red;blue;green",
                         "description": "The field associated with the control.",
                         "validation": {
                             "dataType": "String",

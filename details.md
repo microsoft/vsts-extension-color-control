@@ -1,4 +1,4 @@
-> This is currently only available on TFS "15" or later. It is not available on VSTS.
+> This is currently only available on TFS "15" or later and VSTS.
 
 ## Customize your work item form with a color control ##
 
@@ -6,11 +6,9 @@ Replace your drop-down menu fields with a color control on the work item form to
 
 You can customize the colors and labels you would like to appear on your control. Additionally, the control can be used by both your mouse and keyboard (space bar, left/right and up/down arrow keys).
  
-## Quick steps to get started ##
+## Quick steps to get started ## 
 
-> Please note: This extension is not yet supported on VSTS, as users cannot customize the control via VSTS UI. We will need to include steps on how to walk the user through this control for VSTS once there is support available. 
-
-1. Navigate to your work item form and choose any integer or string field you would like to replace with the toggle control.
+1. Navigate to your work item form customization page and add a Color Form Control.
 
 2. Learn about how to customize the color control directly on XML [here](https://github.com/Microsoft/vsts-sample-wit-custom-control/blob/master/README.md) for TFS. 
 
@@ -32,15 +30,6 @@ The [source](https://github.com/Microsoft/vsts-sample-wit-custom-control) for th
 ## Contributors ##
 
 We thank the following contributor(s) for this extension: Alison Chow, Maria McLaughlin and Nelson Troncoso Aldas. 
-
-## Users have also installed ##
-
-> WITIQ, please note: This link is not live yet on visualstudio.com. 
-
-You can find more custom controls here: 
-
-* Toggle Form Control
-* Integer Up/Down Control
 
 ## Feedback ##
 

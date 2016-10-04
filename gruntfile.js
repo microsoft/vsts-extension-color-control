@@ -3,7 +3,7 @@
         ts: {
             build: {
                 tsconfig: true,
-                "outDir": "./dist/scripts"
+                "outDir": "./dist"
             },
             buildTest: {
                 tsconfig: true,
@@ -42,14 +42,8 @@
                     expand: true, 
                     flatten: true, 
                     src: ["node_modules/vss-web-extension-sdk/lib/VSS.SDK.min.js"], 
-                    dest: "dist/scripts",
+                    dest: "dist",
                     filter: "isFile" 
-                },
-                {
-                    expand: true, 
-                    flatten: false, 
-                    src: ["styles/**", "img/**", "*.html", "vss-extension.json", "*.md"], 
-                    dest: "dist"
                 }]
             }
         },
