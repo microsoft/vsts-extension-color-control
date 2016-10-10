@@ -2,8 +2,7 @@
     grunt.initConfig({
         ts: {
             build: {
-                tsconfig: true,
-                "outDir": "./dist"
+                tsconfig: true
             },
             buildTest: {
                 tsconfig: true,
@@ -16,7 +15,7 @@
         },
         exec: {
             package_dev: {
-                command: "tfx extension create --root dist --manifest-globs vss-extension.json --overrides-file configs/dev.json",
+                command: "tfx extension create --manifest-globs vss-extension.json --overrides-file configs/dev.json",
                 stdout: true,
                 stderr: true
             },
