@@ -25,7 +25,7 @@ We recommend TFS 2015 RC2 and higher when running this extension.
 
 [Learn more](https://github.com/Microsoft/vsts-extension-color-control/blob/master/README.md) about how to customize the color control directly on XML.
 
-# Learn more 
+# Source code 
 
 The [source](https://github.com/Microsoft/vsts-extension-color-control) for this extension can be found on Github - feel free to take, fork and extend. 
 
