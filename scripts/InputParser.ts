@@ -32,9 +32,7 @@ export class InputParser {
      * @throws Will throw an {string} error if Not enough colors provided in admin XML file.
      */
     public static getOptions(inputs: IDictionaryStringTo<string>, allowedValues: string[]): IOption[] {
-
         if (allowedValues && allowedValues.length) {
-
             let colors: string[] = [];
             let inputColors: string[] = [];
             let labels: string[] = [];
@@ -47,9 +45,7 @@ export class InputParser {
             labels = InputParser._getLabels(inputLabels, allowedValues);
 
             return InputParser._buildOptions(allowedValues, colors, labels);
-
         } else {
-
             throw ("The backing field does not have allowed values. Verify that the field used by this control is a picklist");
         }
     }

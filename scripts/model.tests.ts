@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import { expect, assert } from 'chai';
 import { Model } from './model';
 import {IOption} from './IOption';
 

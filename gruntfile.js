@@ -20,17 +20,17 @@
                 stderr: true
             },
             package_release: {
-                command: "tfx extension create --root dist --manifest-globs vss-extension.json --overrides-file configs/release.json",
+                command: "tfx extension create --manifest-globs vss-extension.json --overrides-file configs/release.json",
                 stdout: true,
                 stderr: true
             },
-            publish_dev: {
-                command: "tfx extension publish --service-url https://marketplace.visualstudio.com --root dist --manifest-globs vss-extension.json --overrides-file configs/dev.json",
+            publish_dev: {  
+                command: "tfx extension publish --service-url http://aaronzhou88:8080/tfs --manifest-globs vss-extension.json --overrides-file configs/dev.json",
                 stdout: true,
                 stderr: true
             },
             publish_release: {
-                command: "tfx extension publish --service-url https://marketplace.visualstudio.com --root dist --manifest-globs vss-extension.json --overrides-file configs/release.json",
+                command: "tfx extension publish --service-url https://marketplace.visualstudio.com --manifest-globs vss-extension.json --overrides-file configs/release.json",
                 stdout: true,
                 stderr: true
             }

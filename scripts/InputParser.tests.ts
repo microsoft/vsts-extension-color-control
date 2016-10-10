@@ -56,12 +56,10 @@ describe("InputParser", () => {
 
     it("returns options with default colors and NO labels when NO colors and NO labels provided.", () => {
         expect(InputParser.getOptions({
-
             "FieldName": "Priority",
             "Colors": "",
             "Values": "1;2;3;4",
             "Labels": ""
-
         }, ["1", "2", "3", "4"])).to.be.deep.equal([
             { value: "1", color: "red", label: "" },
             { value: "2", color: "orange", label: "" },
@@ -76,7 +74,7 @@ describe("InputParser", () => {
             "Colors": "red;orange;yellow;blue",
             "Values": "",
             "Labels": "Critical;High;Medium"
-        }, [])).throw("Allowed values not specified.");
+        }, [])).throw("The backing field does not have allowed values. Verify that the field used by this control is a picklist");
     });
 
     it("Returns options with some empty labels if less labels than values provided", () => {
@@ -138,7 +136,7 @@ describe("InputParser", () => {
             { value: "2", color: "orange", label: "" },
             { value: "3", color: "yellow", label: "" },
             { value: "4", color: "blue", label: "Low" }]);
-    });   //
+    });
      
     it("returns custom positions of colors when no color is placed between semicolons.", () => {
         expect(InputParser.getOptions({

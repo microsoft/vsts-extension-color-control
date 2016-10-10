@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "color-form-control",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "name": "Color Form Control",
     "description": "The example we built adds color to picklists and allows user customization through labels.",
     "publisher": "ms-devlabs",
