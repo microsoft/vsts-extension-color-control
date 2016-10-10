@@ -1,37 +1,43 @@
-> This is currently only available on TFS "15" or later and VSTS.
+> Currently only available on TFS "15" or later and Visual Studio Team Services. 
 
-## Customize your work item form with a color control ##
+![Work item form](img/form.png)
 
-Replace your drop-down menu fields with a color control on the work item form to improve visibility. 
+# Help your team identify how critical certain items are
+![Priority](img/priority.png)
 
-You can customize the colors and labels you would like to appear on your control. Additionally, the control can be used by both your mouse and keyboard (space bar, left/right and up/down arrow keys).
- 
-## Quick steps to get started ## 
+# Create a visual language for fields
+![Business Value](img/businessValue.png)
+
+# How to get started
+## Visual Studio Team Services
 
 1. Navigate to your work item form customization page and add a Color Form Control.
 
-2. Learn about how to customize the color control directly on XML [here](https://github.com/Microsoft/vsts-sample-wit-custom-control/blob/master/README.md) for TFS. 
+![Layout Customization](img/layoutCustomization.png)
 
-### TFS On-Premise ###
+2. Edit the control so it can use the right field, labels, and colors.
+
+![Configuration](img/configuration.png)
+
+## TFS On-Premise 
 
 We recommend TFS 2015 RC2 and higher when running this extension.
 
-## Supported browsers ##
+[Learn more](https://github.com/Microsoft/vsts-extension-color-control/blob/master/README.md) about how to customize the color control directly on XML.
 
-* Internet Explorer
-* Microsoft Edge
-* Google Chrome 
-* Firefox
+# Learn more 
 
-## Learn more ##
+The [source](https://github.com/Microsoft/vsts-extension-color-control) for this extension can be found on Github - feel free to take, fork and extend. 
 
-The [source](https://github.com/Microsoft/vsts-sample-wit-custom-control) for this extension can be found on Github - feel free to take, fork and extend. You can also learn how to build your own custom control extension for the work item form [here](https://www.visualstudio.com/en-us/docs/integrate/extensions/develop/custom-control). 
+You can also learn how to build your own custom control extension for the work item form [here](https://www.visualstudio.com/en-us/docs/integrate/extensions/develop/custom-control). 
 
-## Contributors ##
+> Microsoft DevLabs is an outlet for experiments from Microsoft, experiments that represent some of the latest ideas around developer tools. Solutions in this category are designed for broad usage, and you are encouraged to use and provide feedback on them; however, these extensions are not supported nor are any commitments made as to their longevity.
+
+# Contributors
 
 We thank the following contributor(s) for this extension: Alison Chow, Maria McLaughlin and Nelson Troncoso Aldas. 
 
-## Feedback ##
+# Feedback 
 
 We need your feedback! Here are some ways to connect with us:
 
