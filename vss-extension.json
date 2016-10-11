@@ -26,16 +26,16 @@
     },
     "links": {
         "learn": {
-            "uri": "https://github.com/Microsoft/vsts-sample-wit-custom-control/blob/master/README.md"
+            "uri": "https://github.com/Microsoft/vsts-extension-color-control/blob/master/README.md"
         },
         "support": {
-            "uri": "https://github.com/Microsoft/vsts-sample-wit-custom-control"
+            "uri": "https://github.com/Microsoft/vsts-extension-color-control"
         },
         "repository": {
-            "uri": "https://github.com/Microsoft/vsts-sample-wit-custom-control"
+            "uri": "https://github.com/Microsoft/vsts-extension-color-control"
         },
         "issues": {
-            "uri": "https://github.com/Microsoft/vsts-sample-wit-custom-control/issues"
+            "uri": "https://github.com/Microsoft/vsts-extension-color-control/issues"
         }
     },
     "branding": {
