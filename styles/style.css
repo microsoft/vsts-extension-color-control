@@ -18,10 +18,14 @@ div {
   background-color:#E3F2FD
 }
 
-.container {
-  padding: 3px;
+.errorContainer {
   height:100%;
   border: 1px solid #E6E6E6;
+}
+
+.container {
+  height:100%;
+  border: 1px solid transparent;
 }
 
 .container:hover {

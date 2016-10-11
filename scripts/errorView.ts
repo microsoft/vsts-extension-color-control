@@ -9,8 +9,8 @@ export class ErrorView {
 
     constructor(error: string) {
         // container div
-        var container = $("<div />");
-        container.addClass("container");
+        var errorContainer = $("<div />");
+        errorContainer.addClass("errorContainer");
 
         var table = $("<table></table>");
         var tr = $("<tr></tr>");
@@ -36,8 +36,8 @@ export class ErrorView {
         tr2.append(help);
         table.append(tr2);
 
-        container.append(table);
+        errorContainer.append(table);
 
-        $('body').empty().append(container);
+        $('body').empty().append(errorContainer);
     }
 }
