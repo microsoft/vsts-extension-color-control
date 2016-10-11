@@ -4,7 +4,6 @@ Purpose: This class is being used to get errors from an input parser and
             order to be sent to a view to display them.       
 ***************************************************************************/
 
-
 // shows the errors in the control container rather than the control.
 export class ErrorView {
 
@@ -13,24 +12,31 @@ export class ErrorView {
         var container = $("<div />");
         container.addClass("container");
 
-        // create an icon and text for the error
-        var warning = $("<p />");
-        warning.text(error);
-        warning.attr("title", error);
-        container.append(warning);
+        var table = $("<table></table>");
+        var tr = $("<tr></tr>");
+        var icon = $("<td><span class='bowtie-icon bowtie-status-error'></span></td>");
+        var warning = $("<td></td>").text(error).attr("title", error);
 
+        table.append(tr);
+        tr.append(icon);
+        tr.append(warning);
 
-        // include documentation link for help.
-        var help = $("<p />");
-        help.text("See ");
+        var tr2 = $("<tr></tr>");
+        tr2.append("<td></td>");
+        
+        var help = $("<td></td>");
+        help.text("For more information click ");
 
         var a = $("<a> </a>");
-        a.attr("href", "https://www.visualstudio.com/en-us/products/visual-studio-team-services-vs.aspx");
+        a.attr("href", "https://www.visualstudio.com/en-us/docs/work/customize/customize-work");
         a.attr("target", "_blank");
-        a.text("Documentation.");
-
+        a.text("here.");
         help.append(a);
-        container.append(help);
+
+        tr2.append(help);
+        table.append(tr2);
+
+        container.append(table);
 
         $('body').empty().append(container);
     }

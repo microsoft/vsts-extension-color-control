@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "color-form-control",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "name": "Color Form Control",
     "description": "The example we built adds color to picklists and allows user customization through labels.",
     "publisher": "ms-devlabs",
@@ -52,6 +52,10 @@
             "addressable": true
         },
         {
+            "path": "scripts",
+            "addressable": true
+        },
+        {
             "path": "styles",
             "addressable": true
         },
@@ -78,8 +82,8 @@
                 "inputs": [
                     {
                         "id": "FieldName",
-                        "name": "Backing string field, must have allowed values.",
-                        "description": "The field associated with the control.",
+                        "name": "Select the field for this control. Example: Priority",
+                        "description": "The field must have allowed values.",
                         "type": "WorkItemField",
                         "properties": {
                             "workItemFieldTypes": ["String", "Integer"]
@@ -91,8 +95,7 @@
                     },
                     {
                         "id": "Labels",
-                        "name": "Labels, ';' seperated. Example: a;b;c",
-                        "description": "The list of values to select from.",
+                        "name": "Define labels for each value. Example: a;b;c",
                         "validation": {
                             "dataType": "String",
                             "isRequired": false
@@ -100,8 +103,7 @@
                     },
                     {
                         "id": "Colors",
-                        "name": "Colors, ';' seperated. Example red;blue;green",
-                        "description": "The field associated with the control.",
+                        "name": "Define colors for each value. Example: red;blue;green",
                         "validation": {
                             "dataType": "String",
                             "isRequired": false

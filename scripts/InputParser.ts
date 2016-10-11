@@ -29,7 +29,6 @@ export class InputParser {
      *           label: labels[i]
      *       }
      * @throws Will throw an {string} error if allowedValues are not specified.
-     * @throws Will throw an {string} error if Not enough colors provided in admin XML file.
      */
     public static getOptions(inputs: IDictionaryStringTo<string>, allowedValues: string[]): IOption[] {
         if (allowedValues && allowedValues.length) {
@@ -46,7 +45,7 @@ export class InputParser {
 
             return InputParser._buildOptions(allowedValues, colors, labels);
         } else {
-            throw ("The backing field does not have allowed values. Verify that the field used by this control is a picklist");
+            throw ("The backing field does not have allowed values.");
         }
     }
     /**
@@ -68,23 +67,15 @@ export class InputParser {
      * to every value. Also, it checks if the colors were correctly inputed.
      * @return {string[]} newColors - An array of {string} colors that match
      *         the number of values.
-     * @throws {string} "Not enough colors provided in admin XML file."
      * @static
      * @private
      */
     private static _getColors(inputColors: string[], values: string[]): string[] {
-
-        // Values length can never be 0, colors length can be 0 or more
-        if (values.length > inputColors.length && inputColors.length !== 0) {
-            // If values array length is greater, an error will appear 
-            throw ("Not enough colors provided in admin XML file.");
-        }
-
-        if (inputColors.length === 0) {
-            //DefaultColors is a static class wich does the processing of colors.
-            return Colors.getColors(values.length);
+        if(inputColors.length < values.length) {
+            //append default colors if we are given less colors than values
+            return inputColors.concat(Colors.getColors(values.length).slice(inputColors.length));
         } else {
-            return values.map((v, idx) => inputColors[idx] || "");
+            return inputColors.slice(0,values.length);
         }
     }
     /**
@@ -98,7 +89,7 @@ export class InputParser {
      */
     private static _getLabels(inputLabels: string[], values: string[]): string[] {
         // Values length can never be 0, labels length can be 0 or more 
-        // There will be no default labels, just whitespace ""
+        // Defaults to empty string if less labels than values are provided
         return values.map((v, idx) => inputLabels[idx] || "");
     }
     /**
@@ -109,7 +100,6 @@ export class InputParser {
      * @private
      */
     private static _buildOptions(values: string[], colors: string[], labels: string[]): IOption[] {
-
         let options: IOption[] = [];
         let valuesLength: number = values.length;
 
