@@ -31,7 +31,7 @@ describe("Colors", () => {
     it("outputs color array for 8 values", () => {
         expect(Colors.getColors(8)).to.be.deep.equal((["darkred", "red", "orange", "yellow", "blue", "darkblue", "purple", "purple"]));
     });
-    
+
     // Tests for twenty values, extreme case, exceeds maximum as well
     it("outputs color array for 15 values", () => {
         expect(Colors.getColors(15)).to.be.deep.equal((["darkred", "red", "orange", "yellow", "blue", "darkblue", "purple", "purple", "purple", "purple", "purple", "purple", "purple", "purple", "purple"]));

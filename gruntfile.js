@@ -24,7 +24,7 @@
                 stdout: true,
                 stderr: true
             },
-            publish_dev: {  
+            publish_dev: {
                 command: "tfx extension publish --service-url https://marketplace.visualstudio.com --manifest-globs vss-extension.json --overrides-file configs/dev.json",
                 stdout: true,
                 stderr: true
