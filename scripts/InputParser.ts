@@ -75,7 +75,7 @@ export class InputParser {
             //append default colors if we are given less colors than values
             return inputColors.concat(Colors.getColors(values.length).slice(inputColors.length));
         } else {
-            return inputColors.slice(0,values.length);
+            return inputColors.slice(0, values.length);
         }
     }
     /**

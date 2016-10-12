@@ -12,20 +12,14 @@ export class ErrorView {
         var errorContainer = $("<div />");
         errorContainer.addClass("errorContainer");
 
-        var table = $("<table></table>");
-        var tr = $("<tr></tr>");
-        var icon = $("<td><span class='bowtie-icon bowtie-status-error'></span></td>");
-        var warning = $("<td></td>").text(error).attr("title", error);
+        var rdiv = $("<div/>").addClass("rightDiv");
+        var ldiv = $("<div/>");
 
-        table.append(tr);
-        tr.append(icon);
-        tr.append(warning);
+        var icon = $("<span class='bowtie-icon bowtie-status-error'></span>");
+        rdiv.append(icon);
 
-        var tr2 = $("<tr></tr>");
-        tr2.append("<td></td>");
-        
-        var help = $("<td></td>");
-        help.text("For more information click ");
+        var warning = $("<span></span>").text(error).attr("title", error);
+        var help = $("<span></span>").text("For more information click ");
 
         var a = $("<a> </a>");
         a.attr("href", "https://www.visualstudio.com/en-us/docs/work/customize/customize-work");
@@ -33,10 +27,12 @@ export class ErrorView {
         a.text("here.");
         help.append(a);
 
-        tr2.append(help);
-        table.append(tr2);
+        ldiv.append(warning);
+        ldiv.append($("<br/>"));
+        ldiv.append(help);
 
-        errorContainer.append(table);
+        errorContainer.append(rdiv);
+        errorContainer.append(ldiv);
 
         $('body').empty().append(errorContainer);
     }
