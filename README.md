@@ -177,7 +177,7 @@ vss-extension.json  - Extension manifest
 
 #### Grunt ####
 
-Three basic `grunt` tasks are defined:
+Five basic `grunt` tasks are defined:
 
 * `build` - Compiles TS files in `scripts` folder
 * `package-dev` - Builds the development version of the vsix package
