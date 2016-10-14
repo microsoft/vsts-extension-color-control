@@ -6,6 +6,11 @@ div {
     text-overflow:  ellipsis;
 }
 
+.rightDiv {
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
 .container:focus {
   outline: solid lightgray 1px;
 }
@@ -16,6 +21,12 @@ div {
 
 .row:not(.selected):hover{
   background-color:#E3F2FD
+}
+
+.errorContainer {
+  display: flex;
+  height:100%;
+  border: 1px solid #E6E6E6;
 }
 
 .container {

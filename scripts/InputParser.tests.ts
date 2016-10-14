@@ -31,19 +31,6 @@ describe("InputParser", () => {
             { value: "4", color: "blue", label: "Low" }]);
     });
 
-    it("returns options with empty strings in label key when no labels are provided", () => {
-        expect(InputParser.getOptions({
-            "FieldName": "Priority",
-            "Colors": "red;orange;yellow;blue",
-            "Values": "1;2;3;4",
-            "Labels": ""
-        }, bestCaseValues)).to.be.deep.equal([
-            { value: "1", color: "red", label: "" },
-            { value: "2", color: "orange", label: "" },
-            { value: "3", color: "yellow", label: "" },
-            { value: "4", color: "blue", label: "" }]);
-    });
-
     it("returns 1 default color when 1 value and no colors are provided", () => {
         expect(InputParser.getOptions({
             "FieldName": "Priority",
@@ -56,18 +43,15 @@ describe("InputParser", () => {
 
     it("returns options with default colors and NO labels when NO colors and NO labels provided.", () => {
         expect(InputParser.getOptions({
-
             "FieldName": "Priority",
             "Colors": "",
             "Values": "1;2;3;4",
             "Labels": ""
-
         }, ["1", "2", "3", "4"])).to.be.deep.equal([
             { value: "1", color: "red", label: "" },
             { value: "2", color: "orange", label: "" },
             { value: "3", color: "yellow", label: "" },
             { value: "4", color: "blue", label: "" }]);
-
     });
 
     it("throws when allowed values are not specified", () => {
@@ -76,29 +60,34 @@ describe("InputParser", () => {
             "Colors": "red;orange;yellow;blue",
             "Values": "",
             "Labels": "Critical;High;Medium"
-        }, [])).throw("Allowed values not specified.");
+        }, [])).throw("The backing field does not have allowed values.");
     });
 
-    it("Returns options with some empty labels if less labels than values provided", () => {
+    it("returns options with empty strings as labels if less labels than values are provided", ()=>{
         expect(InputParser.getOptions({
             "FieldName": "Priority",
             "Colors": "red;orange;yellow;blue",
             "Values": "1;2;3;4",
-            "Labels": "Critical;High;Medium"
+            "Labels": "High;Medium;Low"
         }, ["1", "2", "3", "4"])).to.be.deep.equal([
-            { value: "1", color: "red", label: "Critical" },
-            { value: "2", color: "orange", label: "High" },
-            { value: "3", color: "yellow", label: "Medium" },
+            { value: "1", color: "red", label: "High" },
+            { value: "2", color: "orange", label: "Medium" },
+            { value: "3", color: "yellow", label: "Low" },
             { value: "4", color: "blue", label: "" }]);
     });
 
-    it("throws when less colors than values are provided", () => {
-        expect(() => InputParser.getOptions({
+    it("returns options with default colors if less colors than values are provided", () => {
+        expect(InputParser.getOptions({
             "FieldName": "Priority",
             "Colors": "red;orange",
             "Values": "1;2;3;4",
             "Labels": "Critical;High;Medium;Low"
-        }, ["1", "2", "3", "4"])).throw("Not enough colors provided in admin XML file.");
+        }, ["1", "2", "3", "4"])).to.be.deep.equal([
+            { value: "1", color: "red", label: "Critical" },
+            { value: "2", color: "orange", label: "High" },
+            { value: "3", color: "yellow", label: "Medium" },
+            { value: "4", color: "blue", label: "Low" }
+        ]);
     });
 
     it("gives one label to every value, and truncates unused labels when MORE Labels THAN values are provided", () => {
@@ -138,7 +127,7 @@ describe("InputParser", () => {
             { value: "2", color: "orange", label: "" },
             { value: "3", color: "yellow", label: "" },
             { value: "4", color: "blue", label: "Low" }]);
-    });   //
+    });
      
     it("returns custom positions of colors when no color is placed between semicolons.", () => {
         expect(InputParser.getOptions({
@@ -153,7 +142,7 @@ describe("InputParser", () => {
             { value: "4", color: "blue", label: "Low" }]);
     });
 
-    it("Returns one option when one value,one label, and one are color provided", () => {
+    it("returns one option when one value,one label, and one are color provided", () => {
         expect(InputParser.getOptions({
             "FieldName": "Priority",
             "Colors": "red",
