@@ -6,7 +6,7 @@
     "description": "The example we built adds color to picklists and allows user customization through labels.",
     "publisher": "ms-devlabs",
     "icons": {
-        "default": "img/priority.png"
+        "default": "img/logo.png"
     },
     "targets": [
         {
