@@ -3,7 +3,7 @@
     "id": "color-form-control",
     "version": "0.1.2",
     "name": "Color Form Control",
-    "description": "The example we built adds color to picklists and allows user customization through labels.",
+    "description": "Add custom colors and labels for picklist fields.",
     "publisher": "ms-devlabs",
     "icons": {
         "default": "img/logo.png"
@@ -38,10 +38,6 @@
             "uri": "https://github.com/Microsoft/vsts-extension-color-control/issues"
         }
     },
-    "branding": {
-        "color": "rgb(220, 235, 252)",
-        "theme": "light"
-    },
     "files": [
         {
             "path": "img",
@@ -71,6 +67,7 @@
         {
             "id": "color-control-contribution",
             "type": "ms.vss-work-web.work-item-form-control",
+            "description": "Add custom colors and labels for picklist fields.",
             "targets": [
                 "ms.vss-work-web.work-item-form"
             ],
@@ -95,7 +92,7 @@
                     },
                     {
                         "id": "Labels",
-                        "name": "Define labels for each value. Example: Critical;Normal;Low",
+                        "name": "Choose labels for each value. Example: Critical;Normal;Low",
                         "validation": {
                             "dataType": "String",
                             "isRequired": false
@@ -103,7 +100,7 @@
                     },
                     {
                         "id": "Colors",
-                        "name": "Define colors for each value. Example: Red;Blue;Green",
+                        "name": "Choose colors for each value. Example: Red;Blue;Green",
                         "validation": {
                             "dataType": "String",
                             "isRequired": false
