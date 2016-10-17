@@ -11,11 +11,11 @@
 # How to get started
 ## Visual Studio Team Services
 
-1. Navigate to your work item form customization page and add a Color Form Control.
+Navigate to your work item form customization page and add a color picklist control.
 
 ![Layout Customization](img/layoutCustomization.png)
 
-2. Edit the control so it can use the right field, labels, and colors.
+Edit the control so it can use the right field, labels, and colors.
 
 ![Configuration](img/configuration.png)
 
