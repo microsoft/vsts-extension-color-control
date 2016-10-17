@@ -73,7 +73,6 @@
             ],
             "properties": {
                 "name": "Color picklist control",
-                "group": "contributed",
                 "uri": "index.html",
                 "height": 90,
                 "inputs": [
