@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "color-form-control",
     "version": "0.1.2",
-    "name": "Color Form Control",
+    "name": "Color picklist control",
     "description": "Add custom colors and labels for picklist fields.",
     "publisher": "ms-devlabs",
     "icons": {
@@ -72,7 +72,7 @@
                 "ms.vss-work-web.work-item-form"
             ],
             "properties": {
-                "name": "Color Form Control",
+                "name": "Color picklist control",
                 "group": "contributed",
                 "uri": "index.html",
                 "height": 90,
