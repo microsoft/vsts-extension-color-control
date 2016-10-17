@@ -95,7 +95,7 @@
                     },
                     {
                         "id": "Labels",
-                        "name": "Define labels for each value. Example: a;b;c",
+                        "name": "Define labels for each value. Example: Critical;Normal;Low",
                         "validation": {
                             "dataType": "String",
                             "isRequired": false
@@ -103,7 +103,7 @@
                     },
                     {
                         "id": "Colors",
-                        "name": "Define colors for each value. Example: red;blue;green",
+                        "name": "Define colors for each value. Example: Red;Blue;Green",
                         "validation": {
                             "dataType": "String",
                             "isRequired": false
