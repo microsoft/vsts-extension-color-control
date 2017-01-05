@@ -24,6 +24,10 @@
             "path": "details.md"
         }
     },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/Microsoft/vsts-extension-color-control"
+    },
     "links": {
         "learn": {
             "uri": "https://github.com/Microsoft/vsts-extension-color-control/blob/master/README.md"
