@@ -1,5 +1,7 @@
 {
   "devDependencies": {
+    "@types/react": "^0.14.56",
+    "@types/react-dom": "^0.14.20",
     "chai": "^3.5.0",
     "grunt": "~1.0.1",
     "grunt-cli": "^1.2.0",
@@ -16,7 +18,7 @@
     "mocha": "^2.5.3",
     "requirejs": "^2.2.0",
     "tfx-cli": "^0.3.13",
-    "typescript": "^1.8.10",
+    "typescript": "^2.1.4",
     "typings": "^1.0.4",
     "vss-web-extension-sdk": "^1.100.0"
   },
