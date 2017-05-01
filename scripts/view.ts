@@ -149,7 +149,7 @@ export class colorControl {
 
     private _click(evt: JQueryMouseEventObject): void {
         let itemClicked = $(evt.target).closest(".row").data("value");
-        if (!!itemClicked && !!this.onItemClicked) {
+        if (itemClicked != null && $.isFunction(this.onItemClicked)) {
             this.onItemClicked(itemClicked);
         }
     }
