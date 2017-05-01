@@ -8,19 +8,40 @@ import { InputParser } from "./InputParser";
 import { Model } from "./model";
 import { colorControl } from "./view";
 import { ErrorView } from "./errorView";
+import * as VSSUtilsCore from "VSS/Utils/Core";
 import * as Q from "q";
 
 export class Controller {
 
     private _fieldName: string = "";
-
     private _inputs: IDictionaryStringTo<string>;
-
     private _model: Model;
-
     private _view: colorControl;
 
-    constructor() {
+    /**
+     * Store the last recorded window width to know
+     * when we have been shrunk and should resize
+     */
+    private _windowWidth: number;
+    private _minWindowWidthDelta: number = 10; // Minum change in window width to react to
+    private _windowResizeThrottleDelegate: Function;
+    private _bodyElement: HTMLBodyElement;
+
+    constructor() {        
+        this._bodyElement = <HTMLBodyElement>document.getElementsByTagName("body").item(0);
+
+        this._windowResizeThrottleDelegate = VSSUtilsCore.throttledDelegate(this, 50, () => {
+            this._windowWidth = window.innerWidth;
+            this.resize();
+        });
+
+        this._windowWidth = window.innerWidth;
+        $(window).resize(() => {
+            if(Math.abs(this._windowWidth - window.innerWidth) > this._minWindowWidthDelta) {
+               this._windowResizeThrottleDelegate.call(this);
+            }
+        });
+
         this._initialize();
     }
 
@@ -50,6 +71,8 @@ export class Controller {
                             this._model.selectPreviousOption();
                             this._updateInternal(this._model.getSelectedValue());
                         });
+
+                        this.resize();
                     }, this._handleError
                 ).then(null, this._handleError);
             },
@@ -83,5 +106,10 @@ export class Controller {
 
     public getFieldName(): string {
         return this._fieldName;
+    }
+
+    protected resize() {
+        // Cast as any until declarations are updated
+        (VSS as any).resize(null, this._bodyElement.offsetHeight);  
     }
 }
