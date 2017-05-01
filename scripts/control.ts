@@ -110,6 +110,6 @@ export class Controller {
 
     protected resize() {
         // Cast as any until declarations are updated
-        (VSS as any).resize(null, this._bodyElement.offsetHeight);  
+        VSS.resize(null, this._bodyElement.offsetHeight);  
     }
 }
