@@ -37,23 +37,30 @@ You have now installed the extension inside your collection.  You are now able t
     ```xml
         <!--**********************************Work Item Extensions***************************
 
-    Extension:
-        Name: color-control-dev
-        Id: example.color-control-dev
+Extension:
+	Name: color-form-control
+	Id: ms-devlabs.color-form-control
 
-        Control contribution:
-            Id: example.color-control-dev.color-control-contribution
-            Description:
-            Inputs:
-                Id: FieldName
-                Description: The field associated with the control.
-                Type: Field
-                IsRequired: true
+	Control contribution:
+		Id: ms-devlabs.color-form-control.color-control-contribution
+		Description: Add custom colors and labels for picklist fields.
+		Inputs:
+			Id: FieldName
+			Description: The field must have allowed values.
+			Type: WorkItemField
+			Field Type: String; Integer
+			Data Type: String
+			IsRequired: true
 
-                Id: Colors
-                Descriptions: The colors that match the values in the control.
-                Type: String
-                IsRequired: false
+			Id: Labels
+			Description: 
+			Data Type: String
+			IsRequired: false
+
+			Id: Colors
+			Description: 
+			Data Type: String
+			IsRequired: false
     ```
 
 4. Add an extension tag below the "Work Item Extensions" section as shown below to make your control available to work item form. 
@@ -67,7 +74,7 @@ You have now installed the extension inside your collection.  You are now able t
         -->
 
         <Extensions>
-            <Extension Id="example.color-control-dev" />
+            <Extension Id="ms-devlabs.color-form-control" />
         </Extensions>
      ```
 
@@ -76,9 +83,9 @@ You have now installed the extension inside your collection.  You are now able t
     ```XML
         <!--**********************************Work Item Extensions***************************
 
-    Extension:
-        Name: color-control-dev
-        Id: example.color-control-dev
+Extension:
+	Name: color-form-control
+	Id: ms-devlabs.color-form-control
         ...
     ```
 
@@ -90,7 +97,7 @@ You have now installed the extension inside your collection.  You are now able t
         ...
             <Group Id="Planning">
             ...
-                <ControlContribution Label="Priority" Id="<your-control-contribution-id>"
+                <ControlContribution Label="Priority" Id="ms-devlabs.color-form-control.color-control-contribution"
                     <Inputs>
                         <Input Id="FieldName" Value="Microsoft.VSTS.Common.Priority" />
                     </Inputs>
