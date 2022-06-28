@@ -3,6 +3,7 @@ export class Colors {
     /** Colors holds a static method called getColors. This method allows InputParser to 
      * retrieve default colors when the user inputs no colors, but has at least 1 value. 
      */
+    
 
     public static getColors(numberOfValues: number): string[] {
         /** Takes in the number of values available in the control and returns an array of 
