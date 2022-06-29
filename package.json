@@ -1,26 +1,26 @@
 {
   "devDependencies": {
-    "@types/react": "^0.14.56",
-    "@types/react-dom": "^0.14.20",
-    "chai": "^3.5.0",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "chai": "^4.3.6",
     "grunt": "1.5.3",
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-clean": "^1.0.0",
+    "grunt-cli": "^1.4.3",
+    "grunt-contrib-clean": "^2.0.1",
     "grunt-contrib-copy": "~1.0.0",
-    "grunt-exec": "~0.4.7",
-    "grunt-karma": "^2.0.0",
+    "grunt-exec": "~3.0.0",
+    "grunt-karma": "^4.0.2",
     "grunt-ts": "^5.5.1",
-    "karma": "^1.1.0",
+    "karma": "^6.4.0",
     "karma-chai": "^0.1.0",
-    "karma-mocha": "^1.1.1",
-    "karma-phantomjs-launcher": "^1.0.1",
-    "karma-requirejs": "^1.0.0",
-    "mocha": "^2.5.3",
-    "requirejs": "^2.2.0",
-    "tfx-cli": "^0.3.13",
-    "typescript": "^2.1.4",
+    "karma-mocha": "^2.0.1",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-requirejs": "^1.1.0",
+    "mocha": "^10.0.0",
+    "requirejs": "^2.3.6",
+    "tfx-cli": "^0.12.0",
+    "typescript": "^4.7.4",
     "typings": "^1.0.4",
-    "vss-web-extension-sdk": "^1.100.0"
+    "vss-web-extension-sdk": "^5.141.0"
   },
   "name": "vsts-extension-ts-seed-simple",
   "private": true,
@@ -29,6 +29,6 @@
     "postinstall": "typings install"
   },
   "dependencies": {
-    "npm": "^8.12.1"
+    "npm": "^8.13.1"
   }
 }
