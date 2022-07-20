@@ -7,56 +7,52 @@ div {
 }
 
 .rightDiv {
-  margin-right: 3px;
-  margin-left: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
 }
 
 .container:focus {
-  outline: solid lightgray 1px;
+    outline: solid lightgray 1px;
 }
 
 .row.selected:focus {
-  background-color: rgb(220, 230, 244);
-}
-
-.row:not(.selected):hover{
-  background-color:#E3F2FD
+    background-color: var(--component-menu-selected-item-background);
 }
 
 .errorContainer {
-  display: flex;
-  height:100%;
-  border: 1px solid #E6E6E6;
+    display: flex;
+    height:100%;
+    border: 1px solid #E6E6E6;
 }
 
 .container {
-  height:100%;
-  border: 1px solid transparent;
+    height:100%;
+    border: 1px solid transparent;
 }
 
 .container:hover {
-  overflow-y: auto;
+    overflow-y: auto;
 }
 
 .container:not(:hover):not(:focus) .row:not(.selected) > .valueColor {
-  background-color: gray !important;
+    background-color: gray !important;
 }
 
 .container:not(:hover) .row.selected > .valueColor  {
-  color: black;
+    color: var(--palette-neutral-100);
 }
 
 .row {
-  line-height: 18px;
-  clear: both;
-  padding: 3px 2px;
-  cursor:  pointer;
-  padding: 2px;
-  outline: none;
+    line-height: 18px;
+    clear: both;
+    padding: 3px 2px;
+    cursor:  pointer;
+    padding: 2px;
+    outline: none;
 }
 
 .row:hover {
-  background-color: rgb(220, 230, 244);
+    background-color: var(--component-menu-selected-item-background);
 }
 
 .valueColor {
@@ -75,15 +71,15 @@ div {
 
 
 .valueLabel {
-    color: gray;
+    color: var(--text-disabled-color);
 }
 
 .row:hover > .valueLabel,
 .row.selected > .valueLabel {
-  color: black;
+    color: var(--palette-neutral-100);
 }
 
 .row:hover > .valueColor,
 .row.selected > .valueColor {
-  opacity: 1;
+    opacity: 1;
 }
