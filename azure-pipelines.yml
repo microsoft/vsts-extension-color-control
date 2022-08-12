@@ -1,0 +1,12 @@
+trigger:
+- main
+
+pool:
+  name: Default
+stages:
+- stage: Build1
+  jobs:
+    - job:
+      steps:
+      - powershell: Start-Sleep -Seconds 5
+        displayName: 'script 1'
