@@ -17,15 +17,29 @@
     "karma-requirejs": "^1.0.0",
     "mocha": "^2.5.3",
     "requirejs": "^2.2.0",
-    "tfx-cli": "^0.3.13",
-    "typescript": "^2.1.4",
+    "tfx-cli": "^0.12.0",
+    "typescript": "^3.9.10",
     "typings": "^1.0.4",
-    "vss-web-extension-sdk": "^1.100.0"
+    "vss-web-extension-sdk": "^5.141.0",
+
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0",
+    "copy-webpack-plugin": "^6.3.1",
+    "css-loader": "^5.2.4",
+    "style-loader": "^1.2.1",
+    "file-loader": "^6.2.0",
+    "rimraf": "~3.0.2",
+    "ts-loader": "^8.0.11"
   },
   "name": "vsts-extension-ts-seed-simple",
   "private": true,
   "version": "0.5.0",
   "scripts": {
+    "clean:vsix": "rimraf *.vsix",
+    "clean": "npm run clean:vsix && rimraf dist",
+    "build": "grunt build",
+    "build:dev": "npm run clean && webpack --progress",
     "postinstall": "typings install"
   },
   "dependencies": {
