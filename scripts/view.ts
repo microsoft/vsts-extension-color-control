@@ -97,9 +97,9 @@ export class colorControl {
         }
 
         // allows user to click, keyup, or keydown to change the selected value.
-        $(document).click((evt: JQueryMouseEventObject) => {
+        $(document).click((evt ) => {
             this._click(evt);
-        }).bind('keydown', (evt: JQueryKeyEventObject) => {
+        }).bind('keydown', (evt) => {
             if (evt.keyCode == 40 || evt.keyCode == 39) {
                 // According to ARIA accessibility guide, both down and right arrows should be used.
                 if (this.onNextItem) {
@@ -147,7 +147,7 @@ export class colorControl {
         }
     }
 
-    private _click(evt: JQueryMouseEventObject): void {
+    private _click(evt): void {
         let itemClicked = $(evt.target).closest(".row").data("value");
         if (itemClicked != null && $.isFunction(this.onItemClicked)) {
             this.onItemClicked(itemClicked);
