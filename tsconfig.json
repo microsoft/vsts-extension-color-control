@@ -1,7 +1,15 @@
 {
     "compilerOptions": {
         "module": "amd",
-        "sourceMap": false
+        "sourceMap": true,
+        "types": [
+            "vss-web-extension-sdk",
+            "mocha",
+            "jquery",
+            "knockout",
+            "requirejs",
+            "chai"
+        ],
     },
     "exclude": [
         "node_modules"

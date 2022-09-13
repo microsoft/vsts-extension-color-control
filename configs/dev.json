@@ -1,5 +1,7 @@
 {
     "id": "color-control-dev",
     "name": "Color Form Control (dev)",
-    "public": false
+    "publisher": "ms-devlabs",
+    "public": false,
+    "baseUri": "https://localhost:9090"
 }

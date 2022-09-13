@@ -12,17 +12,17 @@
         > cd C:\extensions\vsts-sample-wit-custom-control
         
 1. Run `npm install` to install required local dependencies.
-2. Run `npm install -g grunt` to install a global copy of grunt (unless it's already installed).
-2. Run `grunt package-dev`.
-3. In your browser, navigate to your local instance of TFS, `http://YourTFSInstance:8080/tfs`.
-4. Go to your personal Marketplace.
-6. Click the Marketplace icon in the upper righthand corner.
-7. Click "Browse local extensions" in the dropdown.
-7. Scroll down and click on the "Manage Extensions" widget.
-8. Click the button "Upload new extension".
-9. Browse to the *.vsix* file generated when you packaged your extension.
-10. Select the extension, and then click "Open".  Click "Upload" when the button activates.
-11. Hover over the extension when it appears in the list, and click "Install".
+2. Run `npm build:dev`
+3. Run `npm run package:dev`.
+5. Run `npm run dev` - to start webpack dev server
+7. Go to your personal Marketplace.
+8. Click the Marketplace icon in the upper righthand corner.
+9. Click "Browse local extensions" in the dropdown.
+10. Scroll down and click on the "Manage Extensions" widget.
+11. Click the button "Upload new extension".
+12. Browse to the *.vsix* file generated when you packaged your extension.
+13. Select the extension, and then click "Open".  Click "Upload" when the button activates.
+14. Hover over the extension when it appears in the list, and click "Install".
 
 You have now installed the extension inside your collection.  You are now able to put the control on the work item form.
 
