@@ -46,7 +46,8 @@ module.exports = {
                 { from: "./node_modules/vss-web-extension-sdk/lib/VSS.SDK.min.js", to: "./scripts/VSS.SDK.min.js" },
                 { from: "**/*.css", to: "./css", context: "styles" },
                 { from: "*.html", to: "./", context: "." },
-                { from: "**/*.png", to: "./img", context: "img" },
+                { from: "**/*", to: "./img", context: "img" },
+                { from: "**/*", to: "./images", context: "images" },
                 { from: "./azure-devops-extension.json", to: "azure-devops-extension.json" },
                 { from: "./readme.md", to: "readme.md" }
             ]

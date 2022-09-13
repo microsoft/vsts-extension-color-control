@@ -47,7 +47,7 @@ export class Controller {
 
     private _initialize(): void {
 
-
+debugger
         this._inputs = VSS.getConfiguration().witInputs;
         this._fieldName = InputParser.getFieldName(this._inputs);
 

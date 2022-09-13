@@ -1,4 +1,4 @@
-/// <reference path="../typings/index.d.ts" />
+
 
 import { IOption } from "./IOption";
 import { Model } from "./model";
