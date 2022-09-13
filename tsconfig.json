@@ -3,7 +3,13 @@
         "module": "amd",
         "sourceMap": true,
         "types": [
-            "vss-web-extension-sdk"
+            "vss-web-extension-sdk",
+            "mocha",
+            "jquery",
+            "knockout",
+            "requirejs",
+            "jquery",
+            "chai"
         ],
     },
     "exclude": [
