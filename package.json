@@ -40,6 +40,7 @@
     "clean": "npm run clean:vsix && rimraf dist",
     "build": "grunt build",
     "build:dev": "npm run clean && webpack --progress",
+    "build:release": "npm run clean && webpack --config webpack.prod.config.js --progress",
     "postinstall": "typings install"
   },
   "dependencies": {
