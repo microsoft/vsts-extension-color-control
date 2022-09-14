@@ -1,10 +1,10 @@
-/// <reference path="../typings/index.d.ts" />
+/// <reference types="vss-web-extension-sdk" />
 import { Controller } from "./control";
 import * as ExtensionContracts from "TFS/WorkItemTracking/ExtensionContracts";
 import { WorkItemFormService } from "TFS/WorkItemTracking/Services";
 
 // save on ctr + s
-$(window).bind("keydown", function (event: JQueryEventObject) {
+$(window).bind("keydown", function (event) {
     if (event.ctrlKey || event.metaKey) {
         if (String.fromCharCode(event.which) === "S") {
             event.preventDefault();
@@ -16,6 +16,7 @@ $(window).bind("keydown", function (event: JQueryEventObject) {
 var control: Controller;
 
 var provider = () => {
+    debugger
     return {
         onLoaded: (workItemLoadedArgs: ExtensionContracts.IWorkItemLoadedArgs) => {
             control = new Controller();
