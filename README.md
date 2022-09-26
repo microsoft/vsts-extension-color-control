@@ -1,3 +1,5 @@
+> **NOTE: This extension has been deprecated.** The code is still available but there will be no updates moving forward. Feel free to use the code as-is to build something on your own.
+
 # Custom Control for the Work Item Form
 
 [Learn how to build your own custom control for the work item form.](https://www.visualstudio.com/en-us/docs/integrate/extensions/develop/custom-control)
