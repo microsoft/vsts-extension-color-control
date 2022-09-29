@@ -1,3 +1,6 @@
+# Note
+This extension has been deprecated and is no longer supported. Existing installations will continue to work but we recommend planning for the extension to be uninstalled since it is no longer maintained.
+
 > Currently only available on TFS 2017 or later and Visual Studio Team Services. 
 
 ![Work item form](img/form.png)
